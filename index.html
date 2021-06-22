@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>practice1</title>
+	<style>
+
+        .display{
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 0%;
+            
+            
+        }
+        .me{
+            padding-right: 300px;
+        }
+
+        .animate{
+         
+  
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.25rem;
+    vertical-align: middle;
+    box-shadow: 0 0 0 transparent;
+    border: 1px solid #999;
+    outline: 0 none;
+    transition: box-shadow 0.5s;}
+    
+  .error{
+    
+      animation: shake 0.2s ease-in-out 0s 2;
+      box-shadow: 0 0 0.5em red;}
+    
+@keyframes shake {
+  0% { margin-left: 0rem; }
+  25% { margin-left: 0.5rem; }
+  75% { margin-left: -0.5rem; }
+  100% { margin-left: 0rem; }
+}
+
+
+        
+
+	</style>
+</head>
+
+<body style="margin: 0%;">
+
+  <div class="display" >  
+
+	
+<img src="img2.jpg" width="50%" height="621px" style="object-fit: cover;margin:none;">
+<div class="me" style="align-self:center; padding-left: 300px;" >
+	<div class="card" style="width: 14rem;"  >
+ 
+    
+    
+    
+    
+    <div >	
+	<div  >
+<label>Username</label><br>
+<input type="text" placeholder=" " id="usernme" class="animate"><br>
+<label>Password</label><br>
+<input type="text" placeholder="" id="pwd" class="animate"><br><br>
+<input type="checkbox" >
+		<label>Remember me</label>       
+<input type="submit" value="login"  onclick="vali() " >   
+	  </div></div>
+</div>
+		</div>
+		</div>
+	</div></div></div>
+<script>
+function vali(){
+var username = document.getElementById("usernme").value ;
+var Password = document.getElementById("pwd").value;
+
+
+if((username=="admin" && Password=="1234")){
+
+alert('login successfull');
+return false;
+}
+else if (username==""){
+  document.getElementById("usernme").style.borderColor="red";
+  document.getElementById("usernme").placeholder="field requried";
+  document.getElementById("usernme").className='error animate';
+     
+}
+
+
+
+else
+{
+  alert("login failed")
+} 
+
+}
+
+</script>
+
+
+</body>
+</html>
